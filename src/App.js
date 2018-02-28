@@ -5,7 +5,7 @@ class App extends React.Component {
     super(props);
     
     this.state = {
-      count: 0
+      count: props.initialCount || 0
     };
   }
   
