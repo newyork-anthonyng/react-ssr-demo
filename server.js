@@ -8,6 +8,10 @@ import ReactDOM from "react-dom/server";
 
 app.use(express.static(path.resolve(__dirname, "dist")));
 
+app.get("/client-side", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "index.html"));
+});
+
 app.use("*", (req, res) => {
   // We can pass information from the backend to the frontend
   // const initialCount = req.query.foo || 0;
